@@ -1,0 +1,71 @@
+---
+title: "presentation"
+author: "Shicong Wang"
+date: "10/8/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source("wrangling_code.R")
+source("visualization_function.R")
+```
+
+## Data background
+
+Data resource: Gapminder website (https://www.gapminder.org/data/).
+
+<h3 style="color:MidnightBlue;"> Mother fertility  </h3>
+
+This dataset mainly describes the number of children that would be born to each woman with prevailing age-specific fertility rates from  1799 to 2099.
+
+<h3 style="color:MidnightBlue;"> Life expectancy  </h3>
+
+The second dataset contains the average number of years a newborn child would live if current mortality patterns were to stay the same. It ranges from 1799 to 2099 as well.
+
+## Main procedure for data processing
+
+- <h3 style="color:black;"> Data cleaning  </h2>
+
+- <h3 style="color:black;"> Data visualization  </h2>
+
+- <h3 style="color:black;"> Data explanation and comparison  </h2>
+
+
+## Data cleaning
+
+<p style="color:DarkSlateBlue;"> Here is the processed data，using mother fertility data as an example. <p>
+```{r,echo = FALSE}
+head(data_new1, digits=3)
+```
+
+<p style="color:DarkSlateBlue;"> The data are group by continent, for easily plotting and analyzing. The data in fertility group are the mean of all countries' mother fertility data in every continents from different years.<p> 
+ 
+## Data visualization
+
+<p style="color:DarkSlateBlue;text-align:center"> ggplot for mother fertility <p>
+```{r,echo = FALSE}
+plot1(data_new1)
+```
+
+
+## Data explanation and comparison
+<h3 style="color:MidnightBlue;"> Explanation for the first plot  </h3>
+1. Apparently, from 1799 to 1900, the fertility rates remained a high level all over the world. 
+2. For European countries, fertility rates have been declining since the 20th century, largely because of the      industrial revolution and the fact that men were out fighting during World War I, creating a large number of    vacancies for women, who shifted their focus of life from family to work.
+3. For the rest of the world, fertility rates began to rise in the 1830s, as the world War II began and            countries needed more labor and combat power, as well as to compensate for war casualties. 
+4. Since 1970, with the exception of European countries, the fertility rate of the population has continued to     decline, for population size and social resources have reached a balance. 
+
+ 
+## Data visualization
+<p style="color:DarkSlateBlue;text-align:center"> ggplot for life expectancy <p>
+```{r,echo = FALSE}
+plot2(data_new2)
+```
+
+## Data explanation and comparison
+<h3 style="color:MidnightBlue;"> Explanation for the second plot  </h3>
+1. Overall, the figures show an upward trend. It shows that with the improvement of medical conditions, the life    expectancy of human beings is continuously prolonged.
+2. The two sharp drops coincide with world War I and World War II, suggesting that war had a significant impact    on life expectancy. 
+3. Comparing data from different continents, Life expectancy in Europe is the highest and life expectancy in       Africa is the lowest, which also reflects the gap in health care between developed and underdeveloped           countries
+
