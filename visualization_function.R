@@ -15,8 +15,22 @@ plot2 <- function(t2){
     geom_point(size = 0.5)
 }
 
+#Editor's new visualization function
+plot3 <- function(t){
+  t%>%
+    ggplot(mapping=aes(x=year, y=fertility_group,shape=Continent, color=Continent))+
+    geom_point(size=1)+
+    scale_color_brewer(palette="Accent")+
+    scale_shape_brewer(values=c(2,16))
+}
 
+plot4 <-function(t2){
+  t2 %>%
+    ggplot(mapping=aes(x=year, y=life_group,shape=Continent, color=Continent))+
+    geom_point(size=1)+
+    scale_color_brewer(palette="Accent")+
+    scale_shape_brewer(values=c(2,16))
+}
 
-
-
+#'Unable to view the presentation
 
